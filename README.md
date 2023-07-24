@@ -1,2 +1,7 @@
 # california-housing-price-prediction
-An end-to-end machine learning project
+
+This an end-to-end project involving all the necessary steps in a typical machine learning project. It is used
+to predict the housing prices in California. 
+
+**Note**
+- The dataset is old and not up to date. 
