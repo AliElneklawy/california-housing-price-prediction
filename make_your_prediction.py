@@ -56,16 +56,18 @@ def get_input():
     user_inputs['total_bedrooms'] = float(input("Enter the total number of bedrooms in the district: "))
     user_inputs['population'] = float(input("Enter the population of the district: "))
     user_inputs['households'] = float(input("Enter the number of households in the district: "))
-    user_inputs['median_income'] = float(input("Enter the median income of the district: "))
+    user_inputs['median_income'] = float(input("Enter the median income of the district (in tens of thousands): "))
     user_inputs['ocean_proximity'] = input("Enter the ocean proximity category: (NEAR BAY, INLAND, ISLAND, <1H OCEAN, NEAR OCEAN): ")
 
     user_data = pd.DataFrame([user_inputs])
 
     return user_data
 
-reloaded_model = joblib.load("california_housing_model.pkl")
-input = get_input()
 
-print(f"A house in this district is predicted to be ${reloaded_model.predict(input)[0].round(2)}.")
+if __name__ == '__main__':
+    
+    reloaded_model = joblib.load("/home/elneklawy/Desktop/california_housing_model.pkl")
+    input = get_input()
+    print(f"A house in this district is predicted to be ${reloaded_model.predict(input)[0].round(2)}.")
 
     
