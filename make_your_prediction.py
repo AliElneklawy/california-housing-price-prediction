@@ -66,7 +66,7 @@ def get_input():
 
 if __name__ == '__main__':
     
-    reloaded_model = joblib.load("/home/elneklawy/Desktop/california_housing_model.pkl")
+    reloaded_model = joblib.load("california_housing_model.pkl")
     input = get_input()
     print(f"A house in this district is predicted to be ${reloaded_model.predict(input)[0].round(2)}.")
 
